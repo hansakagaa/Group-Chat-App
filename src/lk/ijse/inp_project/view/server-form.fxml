@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.inp_project.controller.ServerFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane id="parent" prefHeight="600.0" prefWidth="400.0" stylesheets="@assert/styles/server-form.css"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.inp_project.controller.ServerFormController">
+   <Label id="header" layoutX="156.0" layoutY="10.0" text="Server"/>
+   <Separator layoutY="40.0" prefWidth="400.0"/>
+   <JFXTextArea id="area" fx:id="txtArea" editable="false" focusColor="WHITE" layoutX="20.0" layoutY="60.0"
+                prefHeight="400.0" prefWidth="360.0" unFocusColor="WHITE"/>
+   <JFXTextField id="field" fx:id="txtMessage" focusColor="WHITE" layoutX="15.0" layoutY="470.0"
+                 onKeyReleased="#message_key_released" prefHeight="30.0" prefWidth="285.0" promptText="Text Message"
+                 unFocusColor="WHITE"/>
+   <ImageView fx:id="imgCamera" fitHeight="30.0" fitWidth="40.0" layoutX="305.0" layoutY="470.0"
+              onMouseClicked="#choose_image_on_click" pickOnBounds="true" preserveRatio="true">
+      <Image url="@assert/image/icon/camera.png"/>
+   </ImageView>
+   <ImageView fx:id="imgSend" fitHeight="30.0" fitWidth="40.0" layoutX="340.0" layoutY="470.0"
+              onMouseClicked="#send_message_on_click" pickOnBounds="true" preserveRatio="true">
+      <Image url="@assert/image/icon/send.png"/>
+   </ImageView>
 </AnchorPane>
