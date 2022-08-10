@@ -8,10 +8,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="parent" prefHeight="600.0" prefWidth="400.0" stylesheets="@assert/styles/server-form.css"
+<AnchorPane id="parent" prefHeight="600.0" prefWidth="400.0" stylesheets="@assert/styles/client-01-form.css"
             xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="lk.ijse.inp_project.controller.ServerFormController">
-   <Label id="header" layoutX="156.0" layoutY="10.0" text="Server"/>
+            fx:controller="lk.ijse.inp_project.controller.Client01FormController">
+   <Label id="header" layoutX="156.0" layoutY="10.0" text="Client"/>
    <Separator layoutY="40.0" prefWidth="400.0"/>
    <JFXTextArea id="area" fx:id="txtArea" editable="false" focusColor="WHITE" layoutX="20.0" layoutY="60.0"
                 prefHeight="400.0" prefWidth="360.0" unFocusColor="WHITE"/>
@@ -24,6 +24,6 @@
    </ImageView>
    <ImageView fx:id="imgSend" fitHeight="30.0" fitWidth="40.0" layoutX="340.0" layoutY="470.0"
               onMouseClicked="#send_message_on_click" pickOnBounds="true" preserveRatio="true">
-      <Image url="@assert/image/icon/send.png"/>
+      <Image url="@assert/image/icon/send-01.png"/>
    </ImageView>
 </AnchorPane>

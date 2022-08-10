@@ -10,7 +10,7 @@ import javafx.scene.input.MouseEvent;
 /**
  * @author : hansakagaa
  **/
-public class ServerFormController {
+public class Client01FormController {
     @FXML
     private ImageView imgCamera;
     @FXML
