@@ -8,22 +8,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="parent" prefHeight="600.0" prefWidth="400.0" stylesheets="@assert/styles/client-02-form.css"
-            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="lk.ijse.inp_project.controller.Client02FormController">
-    <Label id="header" layoutX="156.0" layoutY="10.0" text="Client"/>
-    <Separator layoutY="40.0" prefWidth="400.0"/>
-    <JFXTextArea id="area" fx:id="txtArea" editable="false" focusColor="WHITE" layoutX="20.0" layoutY="60.0"
-                 prefHeight="400.0" prefWidth="360.0" unFocusColor="WHITE"/>
-    <JFXTextField id="field" fx:id="txtMessage" focusColor="WHITE" layoutX="15.0" layoutY="470.0"
-                  onKeyReleased="#message_key_released" prefHeight="30.0" prefWidth="285.0" promptText="Text Message"
-                  unFocusColor="WHITE"/>
-    <ImageView fx:id="imgCamera" fitHeight="30.0" fitWidth="40.0" layoutX="305.0" layoutY="470.0"
-               onMouseClicked="#choose_image_on_click" pickOnBounds="true" preserveRatio="true">
-        <Image url="@assert/image/icon/camera.png"/>
+<AnchorPane id="parent" prefHeight="600.0" prefWidth="400.0" stylesheets="@assert/styles/client-02-form.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.inp_project.controller.Client02FormController">
+    <Label id="header" layoutX="156.0" layoutY="10.0" text="Client" />
+    <Separator layoutY="40.0" prefWidth="400.0" />
+    <JFXTextArea id="area" fx:id="txtArea" editable="false" focusColor="#eeeeee" layoutX="20.0" layoutY="60.0" prefHeight="400.0" prefWidth="360.0" unFocusColor="#eeeeee" />
+    <JFXTextField id="field" fx:id="txtMessage" focusColor="#eeeeee" layoutX="15.0" layoutY="470.0" onKeyReleased="#message_key_released" prefHeight="30.0" prefWidth="285.0" promptText="Text Message" unFocusColor="#eeeeee" />
+    <ImageView fx:id="imgCamera" fitHeight="30.0" fitWidth="40.0" layoutX="305.0" layoutY="470.0" onMouseClicked="#choose_image_on_click" pickOnBounds="true" preserveRatio="true">
+        <Image url="@assert/image/icon/camera.png" />
     </ImageView>
-    <ImageView fx:id="imgSend" fitHeight="30.0" fitWidth="40.0" layoutX="340.0" layoutY="470.0"
-               onMouseClicked="#send_message_on_click" pickOnBounds="true" preserveRatio="true">
-        <Image url="@assert/image/icon/send-02.png"/>
+    <ImageView fx:id="imgSend" fitHeight="30.0" fitWidth="40.0" layoutX="340.0" layoutY="470.0" onMouseClicked="#send_message_on_click" pickOnBounds="true" preserveRatio="true">
+        <Image url="@assert/image/icon/send-02.png" />
     </ImageView>
 </AnchorPane>
