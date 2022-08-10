@@ -1,0 +1,25 @@
+*{
+    -fx-font-family: Ubuntu, sans-serif;
+}
+
+#parent{
+    -fx-background-color: white;
+}
+
+#header{
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #020202;
+}
+
+#area{
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #eeeeee;
+    -fx-border-radius: 10;
+}
+
+#field{
+    -fx-background-color: #eeeeee;
+    -fx-border-radius: 10;
+}
