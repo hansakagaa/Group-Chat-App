@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -16,6 +18,8 @@ import java.net.Socket;
  * @author : hansakagaa
  **/
 public class ClientFormController {
+    @FXML
+    public AnchorPane root;
     @FXML
     private ImageView imgCamera;
     @FXML
@@ -33,6 +37,8 @@ public class ClientFormController {
     String message = "";
 
     public void initialize(){
+        imgSend.setVisible(false);
+
         new Thread(() -> {
             try {
                 socket = new Socket("localhost",PORT);
@@ -53,7 +59,9 @@ public class ClientFormController {
 
     @FXML
     private void send_message_on_click(MouseEvent event) throws IOException {
-        dataOutputStream.writeUTF(txtMessage.getText().trim());
+        Stage primaryStage = (Stage) this.root.getScene().getWindow();
+        String name = primaryStage.getTitle();
+        dataOutputStream.writeUTF(name+" : "+txtMessage.getText().trim());
         dataOutputStream.flush();
     }
 
@@ -63,5 +71,8 @@ public class ClientFormController {
 
     @FXML
     private void message_key_released(KeyEvent keyEvent) {
+        if (!txtMessage.getText().isEmpty()){
+            imgSend.setVisible(true);
+        }
     }
 }

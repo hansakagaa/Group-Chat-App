@@ -5,18 +5,34 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import java.io.IOException;
 
 /**
  * @author : hansakagaa
  **/
 public class LoginFormController {
     @FXML
+    public AnchorPane root;
+    @FXML
     private JFXTextField txtUserName;
 
     @FXML
-    private void login_on_action(ActionEvent actionEvent) {
+    private void login_on_action(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/inp_project/view/client-form.fxml"));
+        Scene subScene = new Scene(root);
+        Stage primaryStage = (Stage) this.root.getScene().getWindow();
+        primaryStage.setTitle(txtUserName.getText());
+        System.out.println(primaryStage.getTitle());
+        primaryStage.setScene(subScene);
+        primaryStage.centerOnScreen();
     }
 
     @FXML
