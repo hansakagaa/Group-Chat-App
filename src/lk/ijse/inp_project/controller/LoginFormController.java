@@ -30,7 +30,6 @@ public class LoginFormController {
         Scene subScene = new Scene(root);
         Stage primaryStage = (Stage) this.root.getScene().getWindow();
         primaryStage.setTitle(txtUserName.getText());
-        System.out.println(primaryStage.getTitle());
         primaryStage.setScene(subScene);
         primaryStage.centerOnScreen();
     }
