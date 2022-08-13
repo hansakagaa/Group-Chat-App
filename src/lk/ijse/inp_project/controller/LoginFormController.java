@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -20,7 +21,11 @@ import java.io.IOException;
  **/
 public class LoginFormController {
     @FXML
-    public AnchorPane root;
+    private AnchorPane root;
+    @FXML
+    private Label lblHost;
+    @FXML
+    private Label lblPort;
     @FXML
     private JFXTextField txtUserName;
 
@@ -35,7 +40,7 @@ public class LoginFormController {
     }
 
     @FXML
-    public void playMouseEnterAnimation(MouseEvent event) {
+    private void playMouseEnterAnimation(MouseEvent event) {
         if (event.getSource() instanceof JFXButton){
             JFXButton button = (JFXButton) event.getSource();
             ScaleTransition scaleT = new ScaleTransition(Duration.millis(200), button);
@@ -55,7 +60,7 @@ public class LoginFormController {
     }
 
     @FXML
-    public void playMouseExitAnimation(MouseEvent event) {
+    private void playMouseExitAnimation(MouseEvent event) {
         if (event.getSource() instanceof JFXButton){
             JFXButton button = (JFXButton) event.getSource();
             ScaleTransition scaleT = new ScaleTransition(Duration.millis(200), button);
