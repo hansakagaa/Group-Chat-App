@@ -4,6 +4,8 @@
 
 #parent{
     -fx-background-color: white;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
 }
 
 #header{
@@ -24,4 +26,10 @@
     -fx-border-radius: 10;
     -fx-text-fill: white;
     -fx-font-weight: bold;
+}
+
+#lbl{
+    -fx-font-size: 15;
+    -fx-font-style: italic;
+    -fx-alignment: center;
 }

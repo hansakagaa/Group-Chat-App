@@ -16,4 +16,6 @@
     </ImageView>
     <JFXButton id="btn" layoutX="340.0" layoutY="245.0" onAction="#login_on_action" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="30.0" prefWidth="70.0" text="Login" />
     <Separator layoutY="50.0" prefWidth="500.0" />
+   <Label id="lbl" fx:id="lblHost" layoutX="360.0" layoutY="60.0" prefHeight="20.0" prefWidth="125.0" text="Host : localhost" />
+   <Label id="lbl" fx:id="lblPort" layoutX="360.0" layoutY="85.0" prefHeight="20.0" prefWidth="125.0" text="Port : 00000" />
 </AnchorPane>
