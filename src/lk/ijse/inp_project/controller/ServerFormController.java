@@ -15,6 +15,8 @@ public class ServerFormController {
     @FXML
     public JFXTextField txtPort;
     @FXML
+    public JFXTextField txtHost;
+    @FXML
     public JFXButton btnSubmit;
 
     @FXML
