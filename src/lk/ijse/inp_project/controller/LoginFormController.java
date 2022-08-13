@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import lk.ijse.inp_project.dto.ClientDTO;
 
 import java.io.IOException;
 
@@ -29,6 +30,11 @@ public class LoginFormController {
     @FXML
     private JFXTextField txtUserName;
 
+    public void initialize(){
+        lblHost.setText("Host : "+ ClientDTO.hostName);
+        lblPort.setText("Port : "+ ClientDTO.portNum);
+    }
+
     @FXML
     private void login_on_action(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/inp_project/view/client-form.fxml"));
@@ -37,6 +43,7 @@ public class LoginFormController {
         primaryStage.setTitle(txtUserName.getText());
         primaryStage.setScene(subScene);
         primaryStage.centerOnScreen();
+        ClientDTO.userName = txtUserName.getText();
     }
 
     @FXML
