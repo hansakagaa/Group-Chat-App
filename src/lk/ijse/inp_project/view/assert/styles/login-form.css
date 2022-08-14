@@ -16,6 +16,7 @@
 
 #txt{
     -fx-background-color: #eeeeee;
+    -fx-alignment: center;
     -fx-background-radius: 5;
     -fx-border-radius: 5;
 }

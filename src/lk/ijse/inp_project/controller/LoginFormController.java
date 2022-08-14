@@ -24,14 +24,13 @@ public class LoginFormController {
     @FXML
     private AnchorPane root;
     @FXML
-    private Label lblHost;
-    @FXML
     private Label lblPort;
     @FXML
     private JFXTextField txtUserName;
+    @FXML
+    private JFXTextField txtHostName;
 
     public void initialize(){
-        lblHost.setText("Host : "+ ClientDTO.hostName);
         lblPort.setText("Port : "+ ClientDTO.portNum);
     }
 
@@ -44,6 +43,7 @@ public class LoginFormController {
         primaryStage.setScene(subScene);
         primaryStage.centerOnScreen();
         ClientDTO.userName = txtUserName.getText();
+        ClientDTO.hostName = txtHostName.getText();
     }
 
     @FXML
