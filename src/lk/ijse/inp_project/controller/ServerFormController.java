@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import lk.ijse.inp_project.dto.ClientDTO;
 
 /**
  * @author : hansakagaa
@@ -15,12 +16,12 @@ public class ServerFormController {
     @FXML
     public JFXTextField txtPort;
     @FXML
-    public JFXTextField txtHost;
-    @FXML
     public JFXButton btnSubmit;
 
     @FXML
     public void port_submit_on_action(ActionEvent actionEvent) {
 
+
+        btnSubmit.setDisable(true);
     }
 }
