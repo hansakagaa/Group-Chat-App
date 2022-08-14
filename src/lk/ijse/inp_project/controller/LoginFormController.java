@@ -3,7 +3,6 @@ package lk.ijse.inp_project.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.animation.ScaleTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -35,7 +34,7 @@ public class LoginFormController {
     }
 
     @FXML
-    private void login_on_action(ActionEvent actionEvent) throws IOException {
+    private void login_on_action() throws IOException {
         Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/inp_project/view/client-form.fxml"));
         Scene subScene = new Scene(root);
         Stage primaryStage = (Stage) this.root.getScene().getWindow();
