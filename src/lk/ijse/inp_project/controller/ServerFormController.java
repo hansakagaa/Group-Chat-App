@@ -5,7 +5,6 @@ import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import lk.ijse.inp_project.dto.ClientDTO;
 
 /**
  * @author : hansakagaa
