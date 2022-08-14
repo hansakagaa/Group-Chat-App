@@ -3,7 +3,6 @@ package lk.ijse.inp_project.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 /**
@@ -18,7 +17,7 @@ public class ServerFormController {
     public JFXButton btnSubmit;
 
     @FXML
-    public void port_submit_on_action(ActionEvent actionEvent) {
+    public void port_submit_on_action() {
 
 
         btnSubmit.setDisable(true);

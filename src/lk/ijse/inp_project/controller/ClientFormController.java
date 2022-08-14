@@ -4,8 +4,6 @@ import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -21,7 +19,7 @@ public class ClientFormController {
     @FXML
     public AnchorPane root;
     @FXML
-    private ImageView imgCamera;
+    public ImageView imgCamera;
     @FXML
     private ImageView imgSend;
     @FXML
@@ -58,7 +56,7 @@ public class ClientFormController {
     }
 
     @FXML
-    private void send_message_on_click(MouseEvent event) throws IOException {
+    private void send_message_on_click() throws IOException {
         Stage primaryStage = (Stage) this.root.getScene().getWindow();
         String name = primaryStage.getTitle();
         dataOutputStream.writeUTF(name+" : "+txtMessage.getText().trim());
@@ -66,11 +64,11 @@ public class ClientFormController {
     }
 
     @FXML
-    private void choose_image_on_click(MouseEvent event) {
+    private void choose_image_on_click() {
     }
 
     @FXML
-    private void message_key_released(KeyEvent keyEvent) {
+    private void message_key_released() {
         if (!txtMessage.getText().isEmpty()){
             imgSend.setVisible(true);
         }
