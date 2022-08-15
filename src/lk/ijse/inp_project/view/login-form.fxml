@@ -7,15 +7,44 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 
 <AnchorPane id="parent" fx:id="root" prefHeight="325.0" prefWidth="500.0" stylesheets="@assert/styles/login-form.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.inp_project.controller.LoginFormController">
-    <Label id="header" layoutX="30.0" layoutY="15.0" text="Login" />
-    <JFXTextField id="txt" fx:id="txtUserName" focusColor="WHITE" layoutX="40.0" layoutY="235.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="30.0" prefWidth="200.0" promptText="User Name" unFocusColor="WHITE" />
-    <ImageView id="img" fitHeight="150.0" fitWidth="200.0" layoutX="175.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@assert/image/icon/man.png" />
-    </ImageView>
-    <JFXButton id="btn" layoutX="150.0" layoutY="275.0" onAction="#login_on_action" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="30.0" prefWidth="200.0" text="Login" />
-    <Separator layoutY="50.0" prefWidth="500.0" />
-   <Label id="lbl" fx:id="lblPort" layoutX="360.0" layoutY="60.0" prefHeight="20.0" prefWidth="125.0" text="Port : 00000" />
-   <JFXTextField id="txt" fx:id="txtHostName" focusColor="WHITE" layoutX="260.0" layoutY="235.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="30.0" prefWidth="200.0" promptText="Host Name" unFocusColor="WHITE" />
+    <Label id="header" layoutX="30.0" layoutY="10.0" text="Login" />
+   <Label id="lbl" fx:id="lblPort" layoutX="360.0" layoutY="20.0" prefHeight="20.0" prefWidth="125.0" text="Port : 00000" />
+    <Separator layoutY="45.0" prefWidth="500.0" />
+   <BorderPane layoutY="55.0" prefHeight="270.0" prefWidth="500.0">
+      <left>
+          <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <ImageView id="img" fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="20.0" pickOnBounds="true"
+                         preserveRatio="true">
+                  <Image url="@assert/image/icon/man.png"/>
+              </ImageView>
+          </Pane>
+      </left>
+      <center>
+          <Pane id="pane" BorderPane.alignment="CENTER">
+              <JFXTextField id="txt" fx:id="txtUserName" focusColor="#95a5a6" labelFloat="true" layoutX="45.0"
+                            layoutY="20.0" onMouseEntered="#playMouseEnterAnimation"
+                            onMouseExited="#playMouseExitAnimation" prefHeight="30.0" prefWidth="200.0"
+                            promptText="User Name" unFocusColor="#eeeeee"/>
+              <JFXTextField id="txt" fx:id="txtHostName" focusColor="#95a5a6" labelFloat="true" layoutX="45.0"
+                            layoutY="70.0" onMouseEntered="#playMouseEnterAnimation"
+                            onMouseExited="#playMouseExitAnimation" promptText="Host Name" unFocusColor="#eeeeee"/>
+              <JFXButton id="btn" layoutX="45.0" layoutY="190.0" onAction="#login_on_action"
+                         onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation"
+                         prefHeight="30.0" prefWidth="200.0" text="Login"/>
+              <JFXTextField id="txt" fx:id="txtPortNum" focusColor="#95a5a6" labelFloat="true" layoutX="45.0"
+                            layoutY="120.0" onMouseEntered="#playMouseEnterAnimation"
+                            onMouseExited="#playMouseExitAnimation" promptText="Port Name" unFocusColor="#eeeeee"/>
+          </Pane>
+      </center>
+      <right>
+         <Pane prefHeight="270.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+      </right>
+      <bottom>
+         <Pane prefHeight="20.0" prefWidth="500.0" BorderPane.alignment="CENTER" />
+      </bottom>
+   </BorderPane>
 </AnchorPane>

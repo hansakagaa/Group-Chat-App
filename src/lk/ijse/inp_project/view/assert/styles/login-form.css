@@ -15,10 +15,12 @@
 }
 
 #txt{
-    -fx-background-color: #eeeeee;
+    -fx-background-color: #ffffff;
     -fx-alignment: center;
-    -fx-background-radius: 5;
-    -fx-border-radius: 5;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
 }
 
 #btn{
@@ -33,4 +35,10 @@
     -fx-font-size: 15;
     -fx-font-style: italic;
     -fx-alignment: center;
+}
+
+#pane{
+    -fx-background-color: #eeeeee;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
 }
