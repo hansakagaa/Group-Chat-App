@@ -5,7 +5,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+import lk.ijse.inp_project.dto.ClientDTO;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -27,40 +27,46 @@ public class ClientFormController {
     @FXML
     private JFXTextField txtMessage;
 
-    final int PORT = 10000;
+    public static Thread thread;
     Socket socket;
-    DataInputStream dataInputStream;
     DataOutputStream dataOutputStream;
+    DataInputStream dataInputStream;
 
-    String message = "";
+    String message;
 
     public void initialize(){
         imgSend.setVisible(false);
 
-        new Thread(() -> {
-            try {
-                socket = new Socket("localhost",PORT);
+        try {
+            socket = new Socket(ClientDTO.hostName, ClientDTO.portNum);
+            dataOutputStream = new DataOutputStream(socket.getOutputStream());
+            dataInputStream = new DataInputStream(socket.getInputStream());
+            dataOutputStream.writeUTF(ClientDTO.userName);
 
-                dataInputStream = new DataInputStream(socket.getInputStream());
-                dataOutputStream = new DataOutputStream(socket.getOutputStream());
-
-                while (!message.equals("Bye")){
-                    message = dataInputStream.readUTF();
-                    txtArea.appendText("\n" + message);
+            thread = new Thread(() ->{
+                try {
+                    while (socket.isConnected()){
+                        message = dataInputStream.readUTF();
+                        txtArea.appendText("\n"+ message);
+                    }
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
                 }
+            });
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }).start();
+            thread.start();
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @FXML
     private void send_message_on_click() throws IOException {
-        Stage primaryStage = (Stage) this.root.getScene().getWindow();
-        String name = primaryStage.getTitle();
-        dataOutputStream.writeUTF(name+" : "+txtMessage.getText().trim());
-        dataOutputStream.flush();
+        dataOutputStream.writeUTF(ClientDTO.userName+" : "+txtMessage.getText());
+
+        txtMessage.clear();
+        txtMessage.requestFocus();
     }
 
     @FXML
