@@ -53,7 +53,6 @@ public class LoginFormController {
             scaleT.setToX(1.2);
             scaleT.setToY(1.2);
             scaleT.play();
-
         }
         if (event.getSource() instanceof JFXTextField){
             JFXTextField field = (JFXTextField) event.getSource();
@@ -61,7 +60,6 @@ public class LoginFormController {
             scaleT.setToX(1.2);
             scaleT.setToY(1.2);
             scaleT.play();
-
         }
     }
 
@@ -81,7 +79,6 @@ public class LoginFormController {
             scaleT.setToX(1);
             scaleT.setToY(1);
             scaleT.play();
-
             field.setEffect(null);
         }
     }
