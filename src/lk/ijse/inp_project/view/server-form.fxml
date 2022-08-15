@@ -7,10 +7,11 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="parent" prefHeight="225.0" prefWidth="380.0" stylesheets="@assert/styles/server-form.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.inp_project.controller.ServerFormController">
+<AnchorPane id="parent" prefHeight="250.0" prefWidth="380.0" stylesheets="@assert/styles/server-form.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.inp_project.controller.ServerFormController">
     <Label id="header" layoutX="146.0" layoutY="8.0" text="Server" />
     <Separator layoutX="40.0" layoutY="40.0" prefWidth="300.0" />
-    <JFXTextArea id="area" fx:id="txtArea" editable="false" focusColor="WHITE" layoutX="15.0" layoutY="90.0" prefHeight="120.0" prefWidth="350.0" unFocusColor="WHITE" />
-   <JFXTextField id="field" fx:id="txtPort" focusColor="WHITE" layoutX="25.0" layoutY="55.0" prefHeight="30.0" prefWidth="200.0" promptText="  Server Port " unFocusColor="WHITE" />
-   <JFXButton id="btn" fx:id="btnSubmit" layoutX="255.0" layoutY="55.0" onAction="#port_submit_on_action" prefHeight="30.0" prefWidth="100.0" text="Submit" />
+    <JFXTextArea id="area" fx:id="txtArea" editable="false" focusColor="WHITE" layoutX="15.0" layoutY="115.0" prefHeight="120.0" prefWidth="350.0" unFocusColor="WHITE" />
+   <JFXTextField id="field" fx:id="txtPort" focusColor="WHITE" layoutX="25.0" layoutY="80.0" prefHeight="30.0" prefWidth="200.0" promptText="  Server Port " unFocusColor="WHITE" />
+   <JFXButton id="btn" fx:id="btnSubmit" layoutX="255.0" layoutY="80.0" onAction="#port_submit_on_action" prefHeight="30.0" prefWidth="100.0" text="Submit" />
+   <Label fx:id="lblUserSize" layoutX="25.0" layoutY="50.0" text="Current User : 00" />
 </AnchorPane>

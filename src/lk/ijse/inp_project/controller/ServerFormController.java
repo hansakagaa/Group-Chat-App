@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import lk.ijse.inp_project.controller.bo.Server;
 
 /**
@@ -16,6 +17,8 @@ public class ServerFormController {
     public JFXTextField txtPort;
     @FXML
     public JFXButton btnSubmit;
+    @FXML
+    public static Label lblUserSize;
 
     @FXML
     public void port_submit_on_action() {
