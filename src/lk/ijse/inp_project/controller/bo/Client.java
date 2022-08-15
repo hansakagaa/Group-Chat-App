@@ -56,6 +56,8 @@ public class Client {
                     }
                     return !(e == this);
                 }).collect(Collectors.toList());
+
+                ServerFormController.lblUserSize.setText("Current User : "+ Server.clients.size());
             }
         }).start();
     }

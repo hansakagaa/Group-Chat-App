@@ -42,6 +42,8 @@ public class Server {
                     DataOutputStream dataOutputStream = user.getDataOutputStream();
                     dataOutputStream.writeUTF(userName);
                 }
+
+                ServerFormController.lblUserSize.setText("Current User : "+ Server.clients.size());
             }
         }catch (IOException e){
             System.out.println(e.getMessage());
