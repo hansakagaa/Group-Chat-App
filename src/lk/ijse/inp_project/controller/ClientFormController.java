@@ -37,6 +37,11 @@ public class ClientFormController {
     public void initialize(){
         imgSend.setVisible(false);
 
+//
+        ClientDTO.hostName = "localhost";
+        ClientDTO.portNum = 5000;
+//
+
         try {
             socket = new Socket(ClientDTO.hostName, ClientDTO.portNum);
             dataOutputStream = new DataOutputStream(socket.getOutputStream());

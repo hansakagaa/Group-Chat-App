@@ -1,4 +1,4 @@
-package lk.ijse.inp_project.controller.bo;
+package lk.ijse.inp_project.bo;
 
 import lk.ijse.inp_project.controller.ServerFormController;
 
@@ -21,6 +21,8 @@ public class Server {
     Socket socket;
 
     public Server(int PORT){
+        ServerFormController.txtArea.appendText("Start Server..!\n");
+
         clients = new ArrayList<>();
 
         try {
