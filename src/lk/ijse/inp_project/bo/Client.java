@@ -47,7 +47,8 @@ public class Client {
 
                 Server.clients = Server.clients.stream().filter(e -> {
                     if(!(e == this)) {
-                        ServerFormController.txtArea.appendText("\nDisconnected : " + userName);
+//                        ServerFormController.txtArea.appendText("\nDisconnected : " + userName);
+                        System.out.println("Client : "+ "\nDisconnected : " + userName);
                         try {
                             e.getDataOutputStream().writeUTF(userName);
                         } catch (IOException er) {
