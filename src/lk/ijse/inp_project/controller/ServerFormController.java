@@ -4,13 +4,14 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
+import lk.ijse.inp_project.controller.bo.Server;
 
 /**
  * @author : hansakagaa
  **/
 public class ServerFormController {
     @FXML
-    public JFXTextArea txtArea;
+    public static JFXTextArea txtArea;
     @FXML
     public JFXTextField txtPort;
     @FXML
@@ -18,7 +19,8 @@ public class ServerFormController {
 
     @FXML
     public void port_submit_on_action() {
-
+        int PORT = Integer.parseInt(txtPort.getText());
+        new Server(PORT);
 
         btnSubmit.setDisable(true);
     }
