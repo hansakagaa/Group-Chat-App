@@ -56,10 +56,9 @@ public class ServerFormController {
         primaryStage.show();
     }
 //
-//    public void setAppendText(String message){
-//        System.out.println(message);
-//        txtArea.appendText(message);
-//    }
+    public void setAppendText(String message){
+        txtArea.appendText(message);
+    }
 //
 //    public void setText(String message){
 //        try {
