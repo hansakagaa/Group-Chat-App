@@ -10,7 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import lk.ijse.inp_project.utill.Server;
+import lk.ijse.inp_project.util.Server;
 import lk.ijse.inp_project.dto.ClientDTO;
 
 import java.io.IOException;
