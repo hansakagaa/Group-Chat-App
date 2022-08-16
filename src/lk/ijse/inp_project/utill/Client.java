@@ -1,4 +1,4 @@
-package lk.ijse.inp_project.bo;
+package lk.ijse.inp_project.utill;
 
 import lk.ijse.inp_project.controller.ServerFormController;
 

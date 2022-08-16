@@ -39,16 +39,12 @@
       </right>
       <bottom>
           <Pane prefHeight="110.0" prefWidth="500.0" BorderPane.alignment="CENTER">
-              <JFXButton id="btn" fx:id="btnLogin" layoutX="314.0" layoutY="38.0" onAction="#login_client_on_action"
-                         prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #3498db;"
-                         text="Login Client"/>
-              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="218.0" layoutY="15.0" pickOnBounds="true"
-                         preserveRatio="true">
-                  <Image url="@assert/image/icon/man.png"/>
+              <JFXButton id="btn" fx:id="btnLogin" layoutX="314.0" layoutY="38.0" onAction="#login_client_on_action" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #3498db;" text="Login Client" />
+              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="218.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@assert/image/icon/man.png" />
               </ImageView>
-              <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="32.0" layoutY="-23.0" pickOnBounds="true"
-                         preserveRatio="true">
-                  <Image url="@assert/image/icon/discussion.png"/>
+              <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="32.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@assert/image/icon/discussion.png" />
               </ImageView>
           </Pane>
       </bottom>
