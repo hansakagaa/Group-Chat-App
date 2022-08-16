@@ -37,6 +37,8 @@ public class ClientFormController {
     public void initialize(){
         imgSend.setVisible(false);
 
+        System.out.println(ClientDTO.hostName);
+        System.out.println(ClientDTO.portNum);
 //
         ClientDTO.hostName = "localhost";
         ClientDTO.portNum = 5000;

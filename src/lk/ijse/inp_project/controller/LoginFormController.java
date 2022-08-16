@@ -45,6 +45,7 @@ public class LoginFormController {
         primaryStage.centerOnScreen();
         ClientDTO.userName = txtUserName.getText();
         ClientDTO.hostName = txtHostName.getText();
+        ClientDTO.portNum = Integer.parseInt(txtPortNum.getText());
     }
 
     @FXML

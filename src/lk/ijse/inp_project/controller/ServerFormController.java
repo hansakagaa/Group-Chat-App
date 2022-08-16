@@ -3,6 +3,7 @@ package lk.ijse.inp_project.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTextArea;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import lk.ijse.inp_project.bo.Server;
@@ -14,6 +15,8 @@ import lk.ijse.inp_project.dto.ClientDTO;
 public class ServerFormController {
     @FXML
     public static JFXTextArea txtArea;
+    @FXML
+    public JFXButton btnLogin;
     @FXML
     private JFXTextField txtPort;
     @FXML
@@ -35,6 +38,11 @@ public class ServerFormController {
         new Server(PORT);
 
         btnSubmit.setDisable(true);
+    }
+
+    @FXML
+    public void login_client_on_action(ActionEvent actionEvent) {
+
     }
 //
 //    public void setAppendText(String message){

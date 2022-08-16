@@ -17,27 +17,17 @@
    <BorderPane layoutY="55.0" prefHeight="270.0" prefWidth="500.0">
       <left>
           <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-              <ImageView id="img" fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="20.0" pickOnBounds="true"
-                         preserveRatio="true">
-                  <Image url="@assert/image/icon/man.png"/>
+              <ImageView id="img" fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@assert/image/icon/man.png" />
               </ImageView>
           </Pane>
       </left>
       <center>
           <Pane id="pane" BorderPane.alignment="CENTER">
-              <JFXTextField id="txt" fx:id="txtUserName" focusColor="#95a5a6" labelFloat="true" layoutX="45.0"
-                            layoutY="20.0" onMouseEntered="#playMouseEnterAnimation"
-                            onMouseExited="#playMouseExitAnimation" prefHeight="30.0" prefWidth="200.0"
-                            promptText="User Name" unFocusColor="#eeeeee"/>
-              <JFXTextField id="txt" fx:id="txtHostName" focusColor="#95a5a6" labelFloat="true" layoutX="45.0"
-                            layoutY="70.0" onMouseEntered="#playMouseEnterAnimation"
-                            onMouseExited="#playMouseExitAnimation" promptText="Host Name" unFocusColor="#eeeeee"/>
-              <JFXButton id="btn" layoutX="45.0" layoutY="190.0" onAction="#login_on_action"
-                         onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation"
-                         prefHeight="30.0" prefWidth="200.0" text="Login"/>
-              <JFXTextField id="txt" fx:id="txtPortNum" focusColor="#95a5a6" labelFloat="true" layoutX="45.0"
-                            layoutY="120.0" onMouseEntered="#playMouseEnterAnimation"
-                            onMouseExited="#playMouseExitAnimation" promptText="Port Name" unFocusColor="#eeeeee"/>
+              <JFXTextField id="txt" fx:id="txtUserName" focusColor="#95a5a6" labelFloat="true" layoutX="45.0" layoutY="25.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="30.0" prefWidth="200.0" promptText="User Name" unFocusColor="#eeeeee" />
+              <JFXTextField id="txt" fx:id="txtHostName" focusColor="#95a5a6" labelFloat="true" layoutX="45.0" layoutY="75.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" promptText="Host Name" unFocusColor="#eeeeee" />
+              <JFXButton id="btn" layoutX="45.0" layoutY="190.0" onAction="#login_on_action" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="30.0" prefWidth="200.0" text="Login" />
+              <JFXTextField id="txt" fx:id="txtPortNum" focusColor="#95a5a6" labelFloat="true" layoutX="45.0" layoutY="125.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" promptText="Port Name" unFocusColor="#eeeeee" />
           </Pane>
       </center>
       <right>

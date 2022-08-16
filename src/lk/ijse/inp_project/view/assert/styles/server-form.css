@@ -29,11 +29,17 @@
 }
 
 #btn{
-    -fx-background-color: #32ff7e;
     -fx-border-color: #eeeeee;
-    -fx-background-radius: 5;
-    -fx-border-radius: 5;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-font-weight: bold;
     -fx-text-fill: white;
     -fx-font-style: italic;
     -fx-font-size: 15;
+}
+
+#pane{
+    -fx-background-color: #eeeeee;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
 }
