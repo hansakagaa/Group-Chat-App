@@ -20,9 +20,9 @@ import java.io.IOException;
  **/
 public class ServerFormController {
     @FXML
-    public static JFXTextArea txtArea;
+    private JFXTextArea txtArea;
     @FXML
-    public JFXButton btnLogin;
+    private JFXButton btnLogin;
     @FXML
     private JFXTextField txtPort;
     @FXML
@@ -56,7 +56,7 @@ public class ServerFormController {
         primaryStage.show();
     }
 //
-    public static void setAppendText(String message){
+    public void setAppendText(String message){
         txtArea.appendText(message);
     }
 //
