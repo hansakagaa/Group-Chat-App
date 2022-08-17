@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class AppInitializer extends Application {
+public class ClientInitializer extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -20,8 +20,9 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/inp_project/view/server-form.fxml"));
+        Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/inp_project/view/login-form.fxml"));
         Scene mainScene = new Scene(root);
+        primaryStage.setTitle("Chat Room Login");
         primaryStage.setScene(mainScene);
         primaryStage.centerOnScreen();
         primaryStage.show();
