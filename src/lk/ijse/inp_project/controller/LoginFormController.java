@@ -31,21 +31,20 @@ public class LoginFormController {
     @FXML
     private JFXTextField txtPortNum;
 
+    public static String userName;
     public void initialize(){
         lblPort.setText("Port : "+ ClientDTO.portNum);
     }
 
     @FXML
     private void login_on_action() throws IOException {
+        userName = txtUserName.getText();
         Parent root = FXMLLoader.load(this.getClass().getResource("/lk/ijse/inp_project/view/client-form.fxml"));
         Scene subScene = new Scene(root);
         Stage primaryStage = (Stage) this.root.getScene().getWindow();
-        primaryStage.setTitle(txtUserName.getText());
+        primaryStage.setTitle(userName);
         primaryStage.setScene(subScene);
         primaryStage.centerOnScreen();
-        ClientDTO.userName = txtUserName.getText();
-        ClientDTO.hostName = txtHostName.getText();
-        ClientDTO.portNum = Integer.parseInt(txtPortNum.getText());
     }
 
     @FXML
