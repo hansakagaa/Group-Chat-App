@@ -5,17 +5,15 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import lk.ijse.inp_project.dto.ClientDTO;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author : hansakagaa
  **/
-public class ClientFormController {
+public class ClientFormController extends Thread {
     @FXML
     public AnchorPane root;
     @FXML
@@ -27,41 +25,22 @@ public class ClientFormController {
     @FXML
     private JFXTextField txtMessage;
 
-    public static Thread thread;
     Socket socket;
-    DataOutputStream dataOutputStream;
-    DataInputStream dataInputStream;
+    BufferedReader bufferedReader;
+    PrintWriter printWriter;
 
     String message;
 
     public void initialize(){
         imgSend.setVisible(false);
-
-        System.out.println(ClientDTO.hostName);
-        System.out.println(ClientDTO.portNum);
-//
-        ClientDTO.hostName = "localhost";
-        ClientDTO.portNum = 5000;
-//
-
         try {
-            socket = new Socket(ClientDTO.hostName, ClientDTO.portNum);
-            dataOutputStream = new DataOutputStream(socket.getOutputStream());
-            dataInputStream = new DataInputStream(socket.getInputStream());
-            dataOutputStream.writeUTF(ClientDTO.userName);
+            socket = new Socket("localhost", 5000);
+            System.out.println("Connect With Server");
 
-            thread = new Thread(() ->{
-                try {
-                    while (socket.isConnected()){
-                        message = dataInputStream.readUTF();
-                        txtArea.appendText("\n"+ message);
-                    }
-                } catch (IOException e) {
-                    System.out.println(e.getMessage());
-                }
-            });
+            bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
+            printWriter = new PrintWriter(socket.getOutputStream(), true);
 
-            thread.start();
+            this.start();
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -70,7 +49,8 @@ public class ClientFormController {
 
     @FXML
     private void send_message_on_click() throws IOException {
-        dataOutputStream.writeUTF(ClientDTO.userName+" : "+txtMessage.getText());
+        printWriter.println(LoginFormController.userName+" : "+txtMessage.getText());
+        printWriter.flush();
 
         txtMessage.clear();
         txtMessage.requestFocus();
