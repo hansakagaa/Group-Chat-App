@@ -32,6 +32,7 @@ public class LoginFormController {
     private JFXTextField txtPortNum;
 
     public static String userName;
+
     public void initialize(){
         lblPort.setText("Port : "+ ClientDTO.portNum);
     }
