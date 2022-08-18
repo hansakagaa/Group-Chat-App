@@ -39,9 +39,18 @@ public class ClientFormController extends Thread {
 
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
             printWriter = new PrintWriter(socket.getOutputStream(), true);
-
+            System.out.println("42");
             this.start();
-
+            System.out.println("44");
+            while (socket.isConnected()){
+                System.out.println("46");
+                message = bufferedReader.readLine();
+                txtArea.appendText(message);
+                System.out.println(message);
+            }
+            bufferedReader.close();
+            printWriter.close();
+            socket.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
